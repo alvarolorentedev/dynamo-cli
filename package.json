@@ -1,9 +1,37 @@
 {
   "name": "y",
   "version": "0.0.1",
-  "description": "dynamo operations from command line ",
+  "description": "dynamo operations from command line",
   "main": "index.js",
   "repository": "git@github.com:kanekotic/dynamo-cli.git",
   "author": "kanekotic <alvarojosepl@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "bin": {
+    "dynamo-cli": "bin/dynamo-cli.js"
+  },
+  "keywords": [
+    "command line",
+    "tool",
+    "dynamodb",
+    "batch",
+    "csv"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:dev": "jest --watchAll"
+  },
+  "devDependencies": {
+    "jest": "22.4.4"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.247.1",
+    "commander": "^2.15.1",
+    "csv-parse": "^2.4.0"
+  },
+  "jest": {
+    "automock": false,
+    "testMatch": [
+      "**/test/**/*-test.js"
+    ]
+  }
 }

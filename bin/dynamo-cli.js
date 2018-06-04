@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
-const program = require('commander')
+const program = require('commander'),
+  index = require('../lib/index')
 
 program
   .version('0.0.1')
@@ -8,8 +9,6 @@ program
 program
   .command('upload <pathcsv>')
   .description('upload csv to dynamodb')
-  .action((csv) => {
-    console.log('upload: ' + csv)
-  })
+  .action((csv) => index.upload(csv,","))
   
   program.parse(process.argv)

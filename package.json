@@ -18,13 +18,12 @@
   ],
   "scripts": {
     "test": "jest",
-    "test:dev": "jest --watchAll"
+    "test:dev": "jest --watchAll",
+    "test:cov": "jest --coverage"
   },
   "devDependencies": {
     "faker": "4.1.0",
-    "jest": "22.4.4",
-    "stream-array": "1.1.2",
-    "stream-buffers": "3.0.2"
+    "jest": "22.4.4"
   },
   "dependencies": {
     "aws-sdk": "2.247.1",

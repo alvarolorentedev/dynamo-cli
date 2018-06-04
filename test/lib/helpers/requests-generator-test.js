@@ -35,20 +35,3 @@ describe('request generator', () => {
     })
 
 })
-
-
-
-    
-    // let size = result.length
-    // for(i = 0; i < size; i = i + 25) {
-    //   let subarray = result.slice(i, i + 25)
-    //   console.log(subarray + "\n")
-    //   let params = generateDataInFormat(subarray)
-    //   ddb.batchWriteItem(params, function(err, data) {
-    //       if (err) {
-    //           console.log("Error", err)
-    //       } else {
-    //           console.log("Success", data)
-    //       }
-    //   })
-    // }

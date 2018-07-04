@@ -1,4 +1,4 @@
-# dynamo-cmd
+# ![logomakr_31ffss](https://user-images.githubusercontent.com/3071208/42293899-9639c29e-7fdd-11e8-97de-aeaf65118d83.png)
 
 dynamo operations command line (In development not production ready, use with caution.)
 
@@ -17,6 +17,11 @@ dynamo-cli upload <path to csv>
 ```
 
 ## TODO
-[] Add more credentials support
-[] Add download Command
-[] TBD
+
+- [ ] Add more credentials support
+- [ ] Add download Command
+- [ ] TBD
+
+### Logo
+
+Check out the new logo that I created on <a href="http://logomakr.com" title="Logo Makr">LogoMakr.com</a> https://logomakr.com/31ffss

@@ -19,7 +19,13 @@
   "scripts": {
     "test": "jest",
     "test:dev": "jest --watchAll",
-    "test:cov": "jest --coverage"
+    "test:cov": "jest --coverage",
+    "push": "yarn test && git push",
+    "deploy:major": "yarn version --major",
+    "deploy:minor": "yarn version --minor",
+    "deploy:patch": "yarn version --patch",
+    "preversion": "yarn test",
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "faker": "4.1.0",

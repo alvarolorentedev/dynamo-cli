@@ -23,12 +23,12 @@
   },
   "devDependencies": {
     "faker": "4.1.0",
-    "jest": "22.4.4"
+    "jest": "23.3.0"
   },
   "dependencies": {
-    "aws-sdk": "2.247.1",
-    "commander": "2.15.1",
-    "csv-parse": "2.4.0"
+    "aws-sdk": "2.269.1",
+    "commander": "2.16.0",
+    "csv-parse": "2.5.0"
   },
   "jest": {
     "automock": false,

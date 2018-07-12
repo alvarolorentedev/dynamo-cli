@@ -19,15 +19,15 @@
   "scripts": {
     "test": "jest",
     "test:dev": "jest --watchAll",
-    "test:cov": "jest --coverage",
+    "test:cov": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "push": "yarn test && git push",
     "deploy:major": "yarn version --major",
     "deploy:minor": "yarn version --minor",
     "deploy:patch": "yarn version --patch",
-    "preversion": "yarn test",
-    "postversion": "git push && git push --tags"
+    "preversion": "yarn test"
   },
   "devDependencies": {
+    "coveralls": "3.0.2",
     "faker": "4.1.0",
     "jest": "23.3.0"
   },

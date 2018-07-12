@@ -1,5 +1,7 @@
 # ![logomakr_31ffss](https://user-images.githubusercontent.com/3071208/42293899-9639c29e-7fdd-11e8-97de-aeaf65118d83.png)
 
+[![Build Status](https://travis-ci.org/kanekotic/dynamo-cli.svg?branch=master)](https://travis-ci.org/kanekotic/dynamo-cli)
+
 dynamo operations command line (In development not production ready, use with caution.)
 
 ## Use Case 

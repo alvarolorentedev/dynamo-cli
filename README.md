@@ -2,11 +2,10 @@
 
 [![Build Status](https://travis-ci.org/kanekotic/dynamo-cli.svg?branch=master)](https://travis-ci.org/kanekotic/dynamo-cli)
 [![Coverage Status](https://coveralls.io/repos/github/kanekotic/dynamo-cli/badge.svg?branch=master)](https://coveralls.io/github/kanekotic/dynamo-cli?branch=master)
+[![npm](https://img.shields.io/npm/dt/dynamo-cli.svg)](https://github.com/kanekotic/dynamo-cli)
 [![GitHub license](https://img.shields.io/github/license/kanekotic/dynamo-cli.svg)](https://github.com/kanekotic/dynamo-cli/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/dynamo-cli/graphs/commit-activity)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/kanekotic/)
-[![npm](https://img.shields.io/npm/v/dynamo-cli.svg)](https://github.com/kanekotic/dynamo-cli)
-[![npm](https://img.shields.io/npm/dt/dynamo-cli.svg)](https://github.com/kanekotic/dynamo-cli)
 
 
 dynamo operations command line (In development not production ready, use with caution.)

@@ -8,8 +8,6 @@ deploy:
   skip_cleanup: true
   provider: npm
   email: $NPM_EMAIL
-  api_key: "pepe"
+  api_key: $NPM_TOKEN
   on:
     tags: true
-after_deploy:
-  - echo $?

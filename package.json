@@ -1,6 +1,6 @@
 {
   "name": "dynamo-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "dynamo operations from command line",
   "main": "lib/index.js",
   "repository": "git@github.com:kanekotic/dynamo-cli.git",

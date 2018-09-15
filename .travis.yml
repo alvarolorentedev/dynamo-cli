@@ -8,6 +8,8 @@ deploy:
   skip_cleanup: true
   provider: npm
   email: $NPM_EMAIL
-  api_key: $NPM_TOKEN
+  api_key: "notatoken"
   on:
     tags: true
+after_deploy:
+  - if [[ $? != 0 ]]; travis_terminate 1; fi

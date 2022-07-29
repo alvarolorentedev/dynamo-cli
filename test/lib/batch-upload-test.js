@@ -9,7 +9,7 @@ jest.mock('aws-sdk', () => {
 
 const aws = require('aws-sdk'),
     batchUpload = require('../../lib/batch-upload'),
-    faker = require('faker')
+    { faker } = require('@faker-js/faker')
 
 describe('batch upload', () => {
     const dynamoDbMock = {
@@ -23,19 +23,19 @@ describe('batch upload', () => {
     })
 
     it("is configured with the passed parameters", () => {
-        let awsOptions = {region: faker.random.uuid()}
+        let awsOptions = {region: faker.datatype.uuid()}
         batchUpload([],awsOptions,{})
         expect(aws.config.update.mock.calls[0][0]).toBe(awsOptions)
     })
 
     it("obtains dynamoDb instance with dynamo options passed", () => {
-        let dynamoOptions = {version: faker.random.uuid()}
+        let dynamoOptions = {version: faker.datatype.uuid()}
         batchUpload([],{},dynamoOptions)
         expect(aws.DynamoDB.mock.calls[0][0]).toBe(dynamoOptions)
     })
 
     it("sends the data passed to dynamoDB", () => {
-        let formatedContent = [{content: faker.random.uuid()},{content: faker.random.uuid()}]
+        let formatedContent = [{content: faker.datatype.uuid()},{content: faker.datatype.uuid()}]
         batchUpload(formatedContent,null,null)
         expect(dynamoDbMock.batchWriteItem.mock.calls[0][0]).toEqual(formatedContent[0])
         expect(dynamoDbMock.batchWriteItem.mock.calls[1][0]).toEqual(formatedContent[1])

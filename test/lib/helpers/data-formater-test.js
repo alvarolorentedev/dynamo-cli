@@ -1,5 +1,5 @@
 const formater = require('../../../lib/helpers/data-formater'),
-    faker = require('faker')
+    { faker } = require('@faker-js/faker')
 
 
     

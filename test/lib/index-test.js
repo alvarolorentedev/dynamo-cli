@@ -8,7 +8,7 @@ const index = require("../../lib/index")
     requestGenerator = require("../../lib/helpers/requests-generator"),
     csvParse = require("../../lib/parsers/csv-parser"),
     upload = require("../../lib/batch-upload"),
-    faker = require('faker')
+    { faker } = require('@faker-js/faker')
     
 describe('index', () => {
 
@@ -19,28 +19,28 @@ describe('index', () => {
         upload.mockClear()
     })
     it("calls the parser with correct parameters", () => {
-        let path = `path/to/file/${faker.random.uuid()}`
-        let delimeter = faker.random.word()
+        let path = `path/to/file/${faker.datatype.uuid()}`
+        let delimeter = faker.datatype.string()
         index.upload(path, delimeter)
         expect(csvParse.mock.calls[0]).toEqual([path,delimeter])
     })
 
     it("calls the data formater with correct parameters", () => {
-        parserResponse = [faker.random.uuid(), faker.random.uuid()]
+        parserResponse = [faker.datatype.uuid(), faker.datatype.uuid()]
         csvParse.mockImplementation(() => parserResponse)
         index.upload("path/to/file", ",")
         expect(dataFormater.mock.calls[0][0]).toEqual(parserResponse)
     })
 
     it("calls the request generator with correct parameters", () => {
-        formatResponse = [[faker.random.uuid(), faker.random.uuid()],[faker.random.uuid(), faker.random.uuid()]]
+        formatResponse = [[faker.datatype.uuid(), faker.datatype.uuid()],[faker.datatype.uuid(), faker.datatype.uuid()]]
         dataFormater.mockImplementation(() => formatResponse)
         index.upload("path/to/file", ",")
         expect(requestGenerator.mock.calls[0][0]).toEqual(formatResponse)
     })
 
     it("calls the batch upload with correct parameters", () => {
-        requestsData = [[faker.random.uuid(), faker.random.uuid()]]
+        requestsData = [[faker.datatype.uuid(), faker.datatype.uuid()]]
         requestGenerator.mockImplementation(() => requestsData)
         index.upload("path/to/file", ",")
         expect(upload.mock.calls[0][0]).toEqual(requestsData)

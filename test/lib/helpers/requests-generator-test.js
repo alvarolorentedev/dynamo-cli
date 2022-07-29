@@ -1,11 +1,11 @@
 const requestGenerator = require('../../../lib/helpers/requests-generator'),
-    faker = require('faker')
+    { faker } = require('@faker-js/faker')
 
 describe('request generator', () => {
 
     it("returns requests for the requested table", () => {
-        let tableName = faker.random.uuid()
-        let dataFormated = [{some: faker.random.uuid()}, {some: faker.random.uuid()}]
+        let tableName = faker.datatype.uuid()
+        let dataFormated = [{some: faker.datatype.uuid()}, {some: faker.datatype.uuid()}]
         let expectedResult = [
             {
                 RequestItems: {
@@ -17,8 +17,8 @@ describe('request generator', () => {
     })
 
     it("if size is bigger than max batch size split into batches", () => {
-        let tableName = faker.random.uuid()
-        let dataFormated = [{some: faker.random.uuid()}, {some: faker.random.uuid()}, {some: faker.random.uuid()}, {some: faker.random.uuid()}]
+        let tableName = faker.datatype.uuid()
+        let dataFormated = [{some: faker.datatype.uuid()}, {some: faker.datatype.uuid()}, {some: faker.datatype.uuid()}, {some: faker.datatype.uuid()}]
         let expectedResult = [
             {
                 RequestItems: {

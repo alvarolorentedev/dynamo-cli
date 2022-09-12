@@ -29,10 +29,10 @@
   "devDependencies": {
     "@faker-js/faker": "^7.5.0",
     "coveralls": "3.1.1",
-    "jest": "29.0.2"
+    "jest": "29.0.3"
   },
   "dependencies": {
-    "aws-sdk": "2.1209.0",
+    "aws-sdk": "2.1213.0",
     "commander": "9.4.0",
     "csv-parse": "5.3.0"
   },

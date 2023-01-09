@@ -32,8 +32,8 @@
     "jest": "29.3.1"
   },
   "dependencies": {
-    "aws-sdk": "2.1286.0",
-    "commander": "9.4.1",
+    "aws-sdk": "2.1290.0",
+    "commander": "9.5.0",
     "csv-parse": "5.3.3"
   },
   "jest": {

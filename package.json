@@ -32,9 +32,9 @@
     "jest": "29.7.0"
   },
   "dependencies": {
-    "aws-sdk": "2.1510.0",
+    "aws-sdk": "2.1515.0",
     "commander": "11.1.0",
-    "csv-parse": "5.5.2"
+    "csv-parse": "5.5.3"
   },
   "jest": {
     "automock": false,
